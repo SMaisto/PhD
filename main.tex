@@ -1,0 +1,23 @@
+\documentclass[a4paper, 12pt, oneside, openright]{book}
+\usepackage{packages}
+
+\begin{document}
+
+\include{sections/frontmatter}
+
+\frontmatter
+\renewcommand{\chaptermark}[1]{\markboth{\slshape #1}{} }
+
+\include{sections/abstract}
+
+\include{sections/toc}
+
+\mainmatter
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \slshape #1}{} }
+
+\include{sections/sota}
+
+\backmatter
+\include{sections/bib}
+
+\end{document}

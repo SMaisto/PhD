@@ -1,0 +1,33 @@
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[Bjornstrup]{fncychap}
+\usepackage {epstopdf} 
+
+\usepackage{caption}
+
+\usepackage{subfig}
+
+\captionsetup[subfigure]{}
+\renewcommand\thesubfigure{\alph{subfigure}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+
+
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \slshape #1}{} }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% STILE PER LA TESI
+\fancyhead[RO, LE]{}
+\fancyhead[LO, RE]{\leftmark}
+\fancyfoot[CO, CE]{}
+\fancyfoot[RO, LE]{\thepage}
+
+% footnote in footer
+\newcommand{\fancyfootnotetext}[2]{%
+  \fancypagestyle{dingens}{%
+    \fancyfoot[LO,RE]{\parbox{12cm}{\footnotemark[#1]\footnotesize #2}}%
+  }%
+  \thispagestyle{dingens}%
+}
